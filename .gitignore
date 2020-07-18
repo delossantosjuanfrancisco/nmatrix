@@ -2,3 +2,4 @@ node_modules/**/*
 app.yaml
 numsapp
 node_modules
+yarn.lock
