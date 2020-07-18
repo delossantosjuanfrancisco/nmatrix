@@ -1,3 +1,4 @@
+const Moment = require('moment-timezone')
 let Matrix = function(data)
 {
  this.vibraDias = {"0":5,"1":7,"2":3,"3":8,"4":9,"5":1,"6":6}
@@ -10,8 +11,11 @@ let Matrix = function(data)
 
 
  
- this.fecha = new Date()
- this.ForBase = new Date()
+this.fecha = new Date(Moment().tz("America/Santo_Domingo").format("YYYY-MM-DD HH:mm"))
+
+this.ForBase = new Date(Moment().tz("America/Santo_Domingo").format("YYYY-MM-DD HH:mm"))
+console.log(this.ForBase)
+//this.ForBase = 
 
  this.ForBase.setDate(this.ForBase.getDate()+3)
  

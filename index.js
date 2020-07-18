@@ -6,6 +6,8 @@ const app = express()
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 
+
+app.get('/api/tz',homeController.tz)
 app.get('/api/haladera',homeController.haladera)
 app.get('/api/baset',homeController.basetesla)
 

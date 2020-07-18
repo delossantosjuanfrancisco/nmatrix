@@ -2,9 +2,15 @@
 const express = require('express')
 const haladera = require('../api/NumerosJaladera')
 const Matrix = require('../api/Matrix')
+const Moment = require('moment-timezone')
 
 
-
+exports.tz = function(req,res){
+      
+   res.json(Moment().tz("America/Santo_Domingo").format("YYYY-MM-DD HH:mm"))
+   //res.json(Moment.tz.names())
+  
+}
 
 
  exports.haladera = function(req,res){
