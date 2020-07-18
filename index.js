@@ -7,9 +7,10 @@ app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 
 
-app.get('/api/tz',homeController.tz)
+
 app.get('/api/haladera',homeController.haladera)
 app.get('/api/baset',homeController.basetesla)
+app.get('/api/videoid',homeController.basetesla)
 
 app.get('/api/vibra',homeController.vibraciones)
 

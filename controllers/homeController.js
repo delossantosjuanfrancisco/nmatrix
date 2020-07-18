@@ -5,9 +5,9 @@ const Matrix = require('../api/Matrix')
 const Moment = require('moment-timezone')
 
 
-exports.tz = function(req,res){
+exports.videoid = function(req,res){
       
-   res.json(Moment().tz("America/Santo_Domingo").format("YYYY-MM-DD HH:mm"))
+   res.json(process.env.VIDEOID)
    //res.json(Moment.tz.names())
   
 }
